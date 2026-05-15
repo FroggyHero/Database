@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">RecipeNest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">RecipeNest</a>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="terms.html">Terms of Use</a>
+    <div class="nav-right" id="navRight">
+        <a href="login.html">Log In</a>
+        <a href="register.html">Sign Up</a>
+    </div>
+</div>
+
+<div class="recipe-detail-header">
+    <div class="container">
+        <div style="font-size:13px; margin-bottom:8px;">
+            <a href="index.html" style="color:#ddcccc; text-decoration:none;">Home</a> &gt;
+            <a href="browse.html" style="color:#ddcccc; text-decoration:none;">Browse</a> &gt;
+            <span id="breadcrumbTitle">...</span>
+        </div>
+        <div id="recipeCategory" style="font-size:12px; background-color:#8B4513; display:inline-block; padding:3px 12px; border-radius:20px; margin-bottom:10px;"></div>
+        <h1 id="recipeTitle">Loading...</h1>
+        <div class="meta">
+            <span id="recipeAuthor"></span>
+            <span id="recipeDate"></span>
+        </div>
+        <div class="recipe-stats">
+            <div class="stat-box">
+                <span class="num" id="recipeTotalTime">—</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="stat-box">
+                <span class="num" id="recipeServings">—</span>
+                <span class="label">Servings</span>
+            </div>
+            <div class="stat-box">
+                <span class="num" id="recipeDifficulty">—</span>
+                <span class="label">Difficulty</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="two-col">
+
+            <div class="col-main">
+                <h3 style="color:#8B4513; margin-bottom:10px;">About This Recipe</h3>
+                <p id="recipeDescription" style="font-size:14px; color:#444; line-height:1.7; margin-bottom:25px;"></p>
+
+                <h3 style="color:#8B4513; margin-bottom:10px;">Ingredients</h3>
+                <ul class="ingredients-list" id="recipeIngredients" style="margin-bottom:25px;"></ul>
+
+                <h3 style="color:#8B4513; margin-bottom:15px;">Preparation Steps</h3>
+                <ul class="step-list" id="recipeSteps"></ul>
+            </div>
+
+            <div class="col-side">
+                <div class="sidebar-box">
+                    <h4>Quick Info</h4>
+                    <table>
+                        <tr><td><strong>Category</strong></td><td id="infoCategory">—</td></tr>
+                        <tr><td><strong>Prep Time</strong></td><td id="infoPrepTime">—</td></tr>
+                        <tr><td><strong>Cook Time</strong></td><td id="infoCookTime">—</td></tr>
+                        <tr><td><strong>Total Time</strong></td><td id="infoTotalTime">—</td></tr>
+                        <tr><td><strong>Servings</strong></td><td id="infoServings">—</td></tr>
+                        <tr><td><strong>Difficulty</strong></td><td id="infoDifficulty">—</td></tr>
+                    </table>
+                </div>
+
+                <div class="sidebar-box" id="madeByBox" style="display:none;">
+                    <h4>Made By</h4>
+                    <p style="font-size:15px; font-weight:bold; margin:0 0 10px 0;" id="madeByName"></p>
+                    <a id="madeByProfileLink" href="profile.html" class="btn btn-secondary" style="font-size:13px;">View Profile</a>
+                </div>
+
+                <div class="sidebar-box">
+                    <h4>Actions</h4>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <a href="#" id="saveFavBtn" onclick="saveFavoriteFromPage(); return false;" class="btn btn-secondary" style="text-align:center;">Save to Favorites</a>
+                        <a href="browse.html" class="btn btn-secondary" style="text-align:center;">Browse More Recipes</a>
+                        <a href="submit.html" class="btn btn-primary" style="text-align:center;">Submit Your Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">RecipeNest</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Recipes</a>
+            <a href="submit.html">Submit a Recipe</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="login.html">Log In</a>
+            <a href="register.html">Sign Up</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RecipeNest. CS 3600 Project.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

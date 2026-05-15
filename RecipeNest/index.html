@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeNest - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">RecipeNest</a>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="terms.html">Terms of Use</a>
+    <div class="nav-right" id="navRight">
+        <a href="login.html">Log In</a>
+        <a href="register.html">Sign Up</a>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="container">
+        <h1>Share and Discover Recipes</h1>
+        <p>Find home-cooked meals from our community or share your own recipe.</p>
+        <input type="text" placeholder="Search for a recipe..." id="heroSearch">
+        <button onclick="window.location.href='browse.html'">Search</button>
+        <div class="mt-20">
+            <a href="browse.html" style="color:#ddcccc; font-size:14px; margin-right:15px;">Breakfast</a>
+            <a href="browse.html" style="color:#ddcccc; font-size:14px; margin-right:15px;">Lunch</a>
+            <a href="browse.html" style="color:#ddcccc; font-size:14px; margin-right:15px;">Dinner</a>
+            <a href="browse.html" style="color:#ddcccc; font-size:14px;">Desserts</a>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background-color:#fff;">
+    <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="filter-bar">
+            <a href="browse.html" class="filter-btn">All Recipes</a>
+            <a href="browse.html" class="filter-btn">Breakfast</a>
+            <a href="browse.html" class="filter-btn">Lunch</a>
+            <a href="browse.html" class="filter-btn">Dinner</a>
+            <a href="browse.html" class="filter-btn">Desserts</a>
+            <a href="browse.html" class="filter-btn">Snacks</a>
+            <a href="browse.html" class="filter-btn">Drinks</a>
+            <a href="browse.html" class="filter-btn">Vegetarian</a>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <h2 class="section-title" style="margin-bottom:0;">Featured Recipes</h2>
+            <a href="browse.html" class="btn btn-secondary">View All</a>
+        </div>
+
+        <div class="cards-grid" id="featuredRecipesContainer">
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background-color:#fff; text-align:center;">
+    <div class="container">
+        <h2>Share your recipe</h2>
+        <p style="color:#666; margin-bottom:20px;">Join RecipeNest</p>
+        <a href="register.html" class="btn btn-primary">Create an Account</a>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">RecipeNest</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Recipes</a>
+            <a href="submit.html">Submit a Recipe</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="login.html">Log In</a>
+            <a href="register.html">Sign Up</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RecipeNest. CS 3600 Project.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

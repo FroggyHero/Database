@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeNest - Browse Recipes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">RecipeNest</a>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="terms.html">Terms of Use</a>
+    <div class="nav-right" id="navRight">
+        <a href="login.html">Log In</a>
+        <a href="register.html">Sign Up</a>
+    </div>
+</div>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Browse Recipes</h1>
+        <p>Find recipes shared by our community of home cooks.</p>
+    </div>
+</div>
+
+<div class="section" style="background-color:#fff; padding-bottom:10px;">
+    <div class="container">
+
+        <div style="margin-bottom:20px;">
+            <input type="text" id="searchInput" placeholder="Search by recipe name..." oninput="searchRecipes()" style="padding:9px 12px; font-size:14px; border:1px solid #ccc; border-radius:4px; width:250px;">
+            <button onclick="searchRecipes()" class="btn btn-primary" style="margin-left:8px;">Search</button>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterCategory('All', this)">All</button>
+            <button class="filter-btn" onclick="filterCategory('Breakfast', this)">Breakfast</button>
+            <button class="filter-btn" onclick="filterCategory('Lunch', this)">Lunch</button>
+            <button class="filter-btn" onclick="filterCategory('Dinner', this)">Dinner</button>
+            <button class="filter-btn" onclick="filterCategory('Dessert', this)">Desserts</button>
+            <button class="filter-btn" onclick="filterCategory('Snack', this)">Snacks</button>
+            <button class="filter-btn" onclick="filterCategory('Vegetarian', this)">Vegetarian</button>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <p style="font-size:14px; color:#666; margin-bottom:20px;">Showing <span id="recipeCount">0</span> recipes</p>
+
+        <div class="cards-grid" id="recipesContainer">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">RecipeNest</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Recipes</a>
+            <a href="submit.html">Submit a Recipe</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="login.html">Log In</a>
+            <a href="register.html">Sign Up</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RecipeNest. CS 3600 Project.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

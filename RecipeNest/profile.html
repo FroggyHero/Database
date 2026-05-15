@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="profilePageTitle">RecipeNest - Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">RecipeNest</a>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="terms.html">Terms of Use</a>
+    <div class="nav-right" id="navRight">
+        <a href="login.html">Log In</a>
+        <a href="register.html">Sign Up</a>
+    </div>
+</div>
+
+<div class="profile-header">
+    <div class="container">
+        <h1 id="profileName">Loading...</h1>
+        <p id="profileMeta" style="color:#ddcccc; font-size:14px;"></p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="two-col">
+
+            <div class="col-main">
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h2 class="section-title" style="margin-bottom:0;" id="recipesHeading">Recipes</h2>
+                    <a href="submit.html" class="btn btn-primary" id="addRecipeBtn" style="display:none;">Add New Recipe</a>
+                </div>
+
+                <div id="myRecipesContainer">
+                    <p style="color:#999;">Loading recipes...</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top:35px;" id="favoritesHeading">Saved Favorites</h2>
+
+                <div class="cards-grid" id="myFavoritesContainer">
+                    <p style="color:#999;">Loading favorites...</p>
+                </div>
+
+            </div>
+
+            <div class="col-side">
+                <div class="sidebar-box" id="sidebarLinks">
+                    <h4>Quick Links</h4>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <a href="submit.html" class="btn btn-primary" style="text-align:center;">Submit a Recipe</a>
+                        <a href="browse.html" class="btn btn-secondary" style="text-align:center;">Browse Recipes</a>
+                        <a href="login.html" class="btn btn-secondary" style="text-align:center;" onclick="logout(); return false;">Log Out</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">RecipeNest</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Recipes</a>
+            <a href="submit.html">Submit a Recipe</a>
+            <a href="terms.html">Terms of Use</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RecipeNest. CS 3600 Project.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
