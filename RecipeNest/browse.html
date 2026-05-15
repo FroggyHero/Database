@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeNest - Browse Recipes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">RecipeNest</a>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="terms.html">Terms of Use</a>
+    <div class="nav-right">
+        <a href="login.html">Log In</a>
+        <a href="register.html">Sign Up</a>
+    </div>
+</div>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Browse Recipes</h1>
+        <p>Find recipes shared by our community of home cooks.</p>
+    </div>
+</div>
+
+<div class="section" style="background-color:#fff; padding-bottom:10px;">
+    <div class="container">
+
+        <div style="margin-bottom:20px;">
+            <input type="text" id="searchInput" placeholder="Search by recipe name..." oninput="searchRecipes()" style="padding:9px 12px; font-size:14px; border:1px solid #ccc; border-radius:4px; width:300px;">
+            <button onclick="searchRecipes()" class="btn btn-primary" style="margin-left:8px;">Search</button>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterCategory('All', this)">All</button>
+            <button class="filter-btn" onclick="filterCategory('Breakfast', this)">Breakfast</button>
+            <button class="filter-btn" onclick="filterCategory('Lunch', this)">Lunch</button>
+            <button class="filter-btn" onclick="filterCategory('Dinner', this)">Dinner</button>
+            <button class="filter-btn" onclick="filterCategory('Dessert', this)">Desserts</button>
+            <button class="filter-btn" onclick="filterCategory('Snack', this)">Snacks</button>
+            <button class="filter-btn" onclick="filterCategory('Vegetarian', this)">Vegetarian</button>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <p style="font-size:14px; color:#666; margin-bottom:20px;">Showing 9 recipes</p>
+
+        <div class="cards-grid">
+
+            <div class="recipe-card-item card" data-category="Dinner">
+                <div class="card-body">
+                    <div class="card-category">Dinner</div>
+                    <div class="card-title">Spaghetti Carbonara</div>
+                    <div class="card-description">A classic Roman pasta dish made with eggs, cheese, pancetta, and black pepper.</div>
+                    <div class="card-meta">
+                        <span>30 min</span>
+                        <span>Serves 2</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Lunch">
+                <div class="card-body">
+                    <div class="card-category">Lunch</div>
+                    <div class="card-title">Greek Salad</div>
+                    <div class="card-description">Fresh tomatoes, cucumbers, olives, and feta cheese with olive oil dressing.</div>
+                    <div class="card-meta">
+                        <span>15 min</span>
+                        <span>Serves 4</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Dessert">
+                <div class="card-body">
+                    <div class="card-category">Dessert</div>
+                    <div class="card-title">Lemon Cheesecake</div>
+                    <div class="card-description">A creamy cheesecake with a buttery graham cracker crust and lemon flavor.</div>
+                    <div class="card-meta">
+                        <span>90 min</span>
+                        <span>Serves 8</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Breakfast">
+                <div class="card-body">
+                    <div class="card-category">Breakfast</div>
+                    <div class="card-title">Buttermilk Pancakes</div>
+                    <div class="card-description">Light and fluffy pancakes made with buttermilk. Great with maple syrup.</div>
+                    <div class="card-meta">
+                        <span>20 min</span>
+                        <span>Serves 4</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Dinner">
+                <div class="card-body">
+                    <div class="card-category">Dinner</div>
+                    <div class="card-title">Thai Green Curry</div>
+                    <div class="card-description">Coconut milk curry with vegetables and fresh Thai basil. Served over rice.</div>
+                    <div class="card-meta">
+                        <span>40 min</span>
+                        <span>Serves 4</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Snack">
+                <div class="card-body">
+                    <div class="card-category">Snack</div>
+                    <div class="card-title">Chocolate Chip Cookies</div>
+                    <div class="card-description">Classic chewy cookies with chocolate chips. Crispy edges and soft centers.</div>
+                    <div class="card-meta">
+                        <span>25 min</span>
+                        <span>Makes 24</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Vegetarian">
+                <div class="card-body">
+                    <div class="card-category">Vegetarian</div>
+                    <div class="card-title">Veggie Stir Fry</div>
+                    <div class="card-description">A quick stir fry with mixed vegetables, garlic, soy sauce, and sesame oil.</div>
+                    <div class="card-meta">
+                        <span>20 min</span>
+                        <span>Serves 3</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Breakfast">
+                <div class="card-body">
+                    <div class="card-category">Breakfast</div>
+                    <div class="card-title">Avocado Toast</div>
+                    <div class="card-description">Toasted bread topped with mashed avocado, salt, pepper, and a fried egg.</div>
+                    <div class="card-meta">
+                        <span>10 min</span>
+                        <span>Serves 1</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card-item card" data-category="Dessert">
+                <div class="card-body">
+                    <div class="card-category">Dessert</div>
+                    <div class="card-title">Banana Bread</div>
+                    <div class="card-description">Moist and tender banana bread made with ripe bananas, butter, and brown sugar.</div>
+                    <div class="card-meta">
+                        <span>65 min</span>
+                        <span>Serves 8</span>
+                    </div>
+                    <div class="mt-10">
+                        <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">RecipeNest</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Recipes</a>
+            <a href="submit.html">Submit a Recipe</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="login.html">Log In</a>
+            <a href="register.html">Sign Up</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RecipeNest. CS 3600 Project.
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

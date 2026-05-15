@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeNest - My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="brand">RecipeNest</a>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="terms.html">Terms of Use</a>
+    <div class="nav-right">
+        <a href="profile.html">My Profile</a>
+        <a href="login.html" onclick="logout(); return false;">Log Out</a>
+    </div>
+</div>
+
+<div class="profile-header">
+    <div class="container">
+        <h1>Andrew Araujo</h1>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="two-col">
+
+            <div class="col-main">
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h2 class="section-title" style="margin-bottom:0;">My Recipes</h2>
+                    <a href="submit.html" class="btn btn-primary">Add New Recipe</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recipe Name</th>
+                            <th>Category</th>
+                            <th>Date Posted</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="recipe.html?id=1" style="color:#8B4513;">Spaghetti Carbonara</a></td>
+                            <td>Dinner</td>
+                            <td>March 10, 2025</td>
+                            <td>
+                                <a href="recipe.html?id=1" style="color:#8B4513; font-size:13px;">View</a> |
+                                <a href="#" style="color:#8B4513; font-size:13px;">Edit</a> |
+                                <a href="#" style="color:red; font-size:13px;" onclick="deleteRecipe(1, this); return false;">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="recipe.html?id=2" style="color:#8B4513;">Banana Bread</a></td>
+                            <td>Dessert</td>
+                            <td>February 22, 2025</td>
+                            <td>
+                                <a href="recipe.html?id=2" style="color:#8B4513; font-size:13px;">View</a> |
+                                <a href="#" style="color:#8B4513; font-size:13px;">Edit</a> |
+                                <a href="#" style="color:red; font-size:13px;" onclick="deleteRecipe(2, this); return false;">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="recipe.html?id=3" style="color:#8B4513;">Greek Salad</a></td>
+                            <td>Lunch</td>
+                            <td>February 5, 2025</td>
+                            <td>
+                                <a href="recipe.html?id=3" style="color:#8B4513; font-size:13px;">View</a> |
+                                <a href="#" style="color:#8B4513; font-size:13px;">Edit</a> |
+                                <a href="#" style="color:red; font-size:13px;" onclick="deleteRecipe(3, this); return false;">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="section-title" style="margin-top:35px;">Saved Favorites</h2>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-category">Breakfast</div>
+                            <div class="card-title">Buttermilk Pancakes</div>
+                            <div class="card-description">Light and fluffy pancakes made with buttermilk.</div>
+                            <div class="mt-10">
+                                <a href="recipe.html?id=4" class="btn btn-primary">View Recipe</a>
+                                <a href="#" class="btn btn-secondary" style="margin-left:8px; font-size:13px;" onclick="removeFromFavorites(1, this); return false;">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-category">Snack</div>
+                            <div class="card-title">Chocolate Chip Cookies</div>
+                            <div class="card-description">Classic chewy cookies with chocolate chips.</div>
+                            <div class="mt-10">
+                                <a href="recipe.html?id=5" class="btn btn-primary">View Recipe</a>
+                                <a href="#" class="btn btn-secondary" style="margin-left:8px; font-size:13px;" onclick="removeFromFavorites(2, this); return false;">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-side">
+
+                <div class="sidebar-box">
+                    <h4>Quick Links</h4>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <a href="submit.html" class="btn btn-primary" style="text-align:center;">Submit a Recipe</a>
+                        <a href="browse.html" class="btn btn-secondary" style="text-align:center;">Browse Recipes</a>
+                        <a href="login.html" class="btn btn-secondary" style="text-align:center;" onclick="logout(); return false;">Log Out</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">RecipeNest</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Recipes</a>
+            <a href="submit.html">Submit a Recipe</a>
+            <a href="terms.html">Terms of Use</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RecipeNest. CS 3600 Project.
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
